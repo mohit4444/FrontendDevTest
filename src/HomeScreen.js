@@ -1,4 +1,4 @@
-import { Linking, Image, TouchableOpacity, ScrollView, View, Text, StyleSheet, Button } from 'react-native'
+import { Image, TouchableOpacity, ScrollView, View, Text, StyleSheet, Button } from 'react-native'
 import { useQuery } from "@apollo/client";
 import { EVENT_QUERY } from "./gql/Query";
 import { WebView } from 'react-native-webview';
@@ -39,8 +39,8 @@ export default function HomeScreen() {
                     </View>
                 </Modal>
                 <ScrollView>
-                    {data.listEvents.items.map((event, index) => (
-                        <TouchableOpacity onPress={() => { setwebviewData(event); toggleModal() }}>
+                    {data.listEvents.items.map((event) => (
+                        <TouchableOpacity key={event.id} onPress={() => { setwebviewData(event); toggleModal() }}>
                             <View style={styles.event}>
                                 <Text style={styles.title}>{event.title}</Text>
                                 <Image
