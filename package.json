@@ -9,10 +9,15 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.1",
     "expo": "~47.0.3",
     "expo-status-bar": "~1.4.2",
+    "graphql": "^16.6.0",
+    "moment": "^2.29.4",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-native": "0.70.5",
+    "react-native-modal": "^13.0.1",
+    "react-native-webview": "^11.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
