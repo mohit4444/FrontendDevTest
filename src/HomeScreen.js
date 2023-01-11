@@ -28,9 +28,9 @@ export default function HomeScreen() {
         return (
             <>
                 <Modal isVisible={isModalVisible}>
-                    <View style={{ flex: 1, marginTop: 15 }}>
+                    <View style={{ flex: 1, marginTop: 15,backgroundColor:'black',padding:3,borderRadius:10}}>
                         <Button color='red' title="X" onPress={() => toggleModal()} />
-                        <WebView
+                        <WebView style={styles.web}
                             originWhitelist={['*']}
                             source={{ html: webviewData.descriptionHTML }}
                             injectedJavaScript={INJECTED_JAVASCRIPT}
@@ -79,6 +79,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'underline',
         marginBottom: 4
+    },
+    web:{
+        borderColor:'black',
+        borderRadius:10
     }
 });
 

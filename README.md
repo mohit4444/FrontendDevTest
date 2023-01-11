@@ -1,4 +1,3 @@
-● Created a new App (call it what you like)
 ● Displayed a list of Events from the (mock) EventBrite GraphQL API
 ● For each row displayed the name of the Event together with an appropriately/friendly formatted
 date.
